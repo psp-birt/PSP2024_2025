@@ -37,6 +37,7 @@ namespace PSP01_TA_procesos
                         p = null;
                        
                     }
+                    rellenarCombo();
                 }
                 else
                 {
@@ -52,22 +53,28 @@ namespace PSP01_TA_procesos
 
         private void buttonMostrarProcSist_Click(object sender, EventArgs e)
         {
+            rellenarCombo();
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        //método para rellanar Combo
+        private void rellenarCombo()
+        {
             //recoge los procesos del sistema en un array de tipo Process
             Process[] misProcesos = Process.GetProcesses();
             //Limmpia datos del comboBox
             this.comboBoxProc.Items.Clear();
             //Por cada proceso del sistema
-            foreach(Process mp in misProcesos) 
+            foreach (Process mp in misProcesos)
             {
                 //Añade el nombre
                 this.comboBoxProc.Items.Add(new ClaseProc(mp.ProcessName, mp.Id));
             }
             //Muestra el primer nombre del array por defecto.
             this.comboBoxProc.SelectedIndex = 0;
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
     }

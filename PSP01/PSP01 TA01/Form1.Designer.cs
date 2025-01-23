@@ -43,7 +43,7 @@ namespace PSP01_TA_procesos
             buttonLanzarProceso.Name = "buttonLanzarProceso";
             buttonLanzarProceso.Size = new Size(167, 72);
             buttonLanzarProceso.TabIndex = 0;
-            buttonLanzarProceso.Text = "Lanzar Proceso FTP";
+            buttonLanzarProceso.Text = "Lanzar Proceso Calc";
             buttonLanzarProceso.UseVisualStyleBackColor = true;
             buttonLanzarProceso.Click += buttonLanzarProceso_Click;
             // 
